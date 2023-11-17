@@ -1,0 +1,26 @@
+<!-- myapp/templates/upload_file.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="messages container mt-2">
+            {% if messages %}
+                {% for message in messages %}
+                    <div {% if message.tags %} class="alert alert-{{message.tags}}{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div> -->
+    </div>
+    <h2>Upload CSV File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -30,7 +30,7 @@ def upload_file(request):
                     sambol=row[4]
                     # Add more fields as needed
                 )
-                directory_path='C:/Users/CZ/Videos/'
+                directory_path='E:/Account'
                 os.makedirs(directory_path, exist_ok=True)
                 template_data = {'file_name':row[0],'title':row[1],'image_link':row[2],'url_link':row[3],'sambol':row[4]}
                 html_content = render_to_string('video-.espn10.html', template_data)
